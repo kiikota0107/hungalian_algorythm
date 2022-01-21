@@ -174,32 +174,3 @@ function optimal = compute(mat)
         end
     end
 end
-
-
-%田中先生が書いてくださったやつ
-% function [flag, zero_coordinate] = step2(mat)
-%     flag = true(1, size(mat, 2));
-%     for i = 1:size(mat, 1)
-%         [val, idx] = min(mat(i, :));
-%         fprintf('%d %d %d\n', i, val, idx);
-%         flag(idx) = false;
-%         if val > 0
-%             disp('failed');
-%         end
-%         mat(:, idx) = inf;
-%     end
-% end
-% function [flag, zero_coordinate] = step2(mat)
-%     zero_coordinate = [];
-%     for i = 1:size(mat, 1);
-%         row = output_mat(i, :);
-%        for j = 1:size(row, 2);
-%             v = row(1, j);
-%             if v == 0;
-%                 zero_coordinate = cat(zero_coordinate, [i, j]);
-%             end
-%        end
-%        check_row = [];
-%        check_column = [];
-%     end
-% end
